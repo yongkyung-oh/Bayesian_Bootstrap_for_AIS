@@ -126,6 +126,7 @@ def bayesian_bootstrap(X, statistic, n_replications, *arg):
 #    for w in tqdm.tqdm(weights):
     for w in weights:
         weighted_X = np.multiply(X, w.reshape(nr, nc))
+        weighted_X = np.round(weighted_X/np.sum(weighted_X)*np.sum(X)).astype(int)
         if arg == None:
             s, _ = statistic(weighted_X)
         else:
