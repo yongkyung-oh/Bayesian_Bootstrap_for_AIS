@@ -3,6 +3,27 @@ import numpy as np
 #import tqdm
 from itertools import permutations
 
+# Deprecated
+# def get_unique_routes(X):
+#     '''Get the unique route from the grid
+#     Input
+#         X: 2D-like array
+#     Output
+#         unique_routes: unique set of routes for right-down path
+#     '''
+#     # Select unique route
+#     a = X.shape[0] # num row
+#     b = X.shape[1] # num col
+#     y = np.array([-1]*(a-1) + [1]*(b-1)) # Define 1 as rightward, -1 as downword
+#     pp = set(permutations(y, a-1+b-1))
+#     unique_routes = np.array(list(pp))
+
+#     ## Sort the set of unique routes
+#     ind = np.lexsort([unique_routes[:,i] for i in range(unique_routes.shape[1])][::-1])    
+#     unique_routes = unique_routes[ind]
+    
+#     return unique_routes
+
 def get_unique_routes(X):
     '''Get the unique route from the grid
     Input
@@ -11,17 +32,32 @@ def get_unique_routes(X):
         unique_routes: unique set of routes for right-down path
     '''
     # Select unique route
-    a = X.shape[1] # num col
-    b = X.shape[0] # num row
-    y = np.array([1]*(a-1) + [-1]*(b-1)) # Define 1 as rightward, -1 as downword
-    pp = set(permutations(y, a-1+b-1))
-    unique_routes = np.array(list(pp))
+    a = X.shape[0] # num row
+    b = X.shape[1] # num col
+
+    n = a+b-2
+    k = a-1
+    turn = np.ones((k, n-k+1), dtype=int)
+    turn[0] = np.arange(n-k+1)
+    for j in range(1, k):
+        reps = (n-k+j) - turn[j-1]
+        turn = np.repeat(turn, reps, axis=1)
+        ind = np.add.accumulate(reps)
+        turn[j, ind[:-1]] = 1-reps[1:]
+        turn[j, 0] = j
+        turn[j] = np.add.accumulate(turn[j])
+    turn = turn.T
+
+    unique_routes = np.ones((len(turn), n), dtype=int)
+    for j in range(len(turn)):
+        unique_routes[j, turn[j]] = -1 # Define 1 as rightward, -1 as downword
 
     ## Sort the set of unique routes
     ind = np.lexsort([unique_routes[:,i] for i in range(unique_routes.shape[1])][::-1])    
     unique_routes = unique_routes[ind]
     
     return unique_routes
+
 
 def get_path_from_routes(X, unique_routes):
     '''Get the unique path from the grid
