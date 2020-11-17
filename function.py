@@ -1,31 +1,61 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 #import tqdm
-from itertools import permutations
+from itertools import permutations, combinations
 
-# Deprecated
-# def get_unique_routes(X):
-#     '''Get the unique route from the grid
-#     Input
-#         X: 2D-like array
-#     Output
-#         unique_routes: unique set of routes for right-down path
-#     '''
-#     # Select unique route
-#     a = X.shape[0] # num row
-#     b = X.shape[1] # num col
-#     y = np.array([-1]*(a-1) + [1]*(b-1)) # Define 1 as rightward, -1 as downword
-#     pp = set(permutations(y, a-1+b-1))
-#     unique_routes = np.array(list(pp))
+## Deprecated
+def get_unique_routes_old(X):
+    '''Get the unique route from the grid using permutation
+    Input
+        X: 2D-like array
+    Output
+        unique_routes: unique set of routes for right-down path
+    '''
+    # Select unique route
+    a = X.shape[0] # num row
+    b = X.shape[1] # num col
+    y = np.array([-1]*(a-1) + [1]*(b-1)) # Define 1 as rightward, -1 as downword
+    pp = set(permutations(y, a-1+b-1))
+    unique_routes = np.array(list(pp))
 
-#     ## Sort the set of unique routes
-#     ind = np.lexsort([unique_routes[:,i] for i in range(unique_routes.shape[1])][::-1])    
-#     unique_routes = unique_routes[ind]
+    ## Sort the set of unique routes
+    ind = np.lexsort([unique_routes[:,i] for i in range(unique_routes.shape[1])][::-1])    
+    unique_routes = unique_routes[ind]
     
-#     return unique_routes
+    return unique_routes
+
 
 def get_unique_routes(X):
-    '''Get the unique route from the grid
+    '''Get the unique route from the grid using combination
+    Input
+        X: 2D-like array
+    Output
+        unique_routes: unique set of routes for right-down path
+    '''
+    # Select unique route
+    a = X.shape[0] # num row
+    b = X.shape[1] # num col
+
+    n = a+b-2
+    k = a-1
+    turn = combinations(range(n),k)
+
+    unique_routes = []
+    for j in turn:
+        route = np.ones(n, dtype=int)
+        route[list(j)] = -1
+        unique_routes.append(route)
+    unique_routes = np.array(unique_routes)
+        
+    ## Sort the set of unique routes
+    ind = np.lexsort([unique_routes[:,i] for i in range(unique_routes.shape[1])][::-1])    
+    unique_routes = unique_routes[ind]    
+        
+    return unique_routes
+
+
+def get_unique_routes_np(a, b):
+    '''Get the unique route from the grid (using numpy only)
     Input
         X: 2D-like array
     Output
@@ -50,12 +80,7 @@ def get_unique_routes(X):
 
     unique_routes = np.ones((len(turn), n), dtype=int)
     for j in range(len(turn)):
-        unique_routes[j, turn[j]] = -1 # Define 1 as rightward, -1 as downword
-
-    ## Sort the set of unique routes
-    ind = np.lexsort([unique_routes[:,i] for i in range(unique_routes.shape[1])][::-1])    
-    unique_routes = unique_routes[ind]
-    
+        unique_routes[j, turn[j]] = -1
     return unique_routes
 
 
@@ -179,7 +204,8 @@ def get_path_info_from_matrix(X):
         max_idx: path_id which has the maximum weight
         path_info_list: list of dict including path info(path_id, path and sum of weight)
     '''
-    unique_routes = get_unique_routes(X)
+    #unique_routes = get_unique_routes(X)
+    unique_routes = get_unique_routes_np(X)
 
     # Get path info and select maximum route
     idx = 0
