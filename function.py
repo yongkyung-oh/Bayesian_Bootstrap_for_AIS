@@ -54,7 +54,7 @@ def get_unique_routes(X):
     return unique_routes
 
 
-def get_unique_routes_np(a, b):
+def get_unique_routes_np(X):
     '''Get the unique route from the grid (using numpy only)
     Input
         X: 2D-like array
