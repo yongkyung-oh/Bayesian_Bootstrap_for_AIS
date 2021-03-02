@@ -1,5 +1,5 @@
-# [Maritime Logistics Anomaly Detection with Bootstrap Approach](https://yongkyung-oh.github.io/Bayesian_Bootstrap_for_AIS/)
-(Working) YongKyung Oh and SungIl Kim, **Logistics Anomaly Detection With Maritime Big Data: A Bootstrap Approach**
+# [Detection of Abnormal Vessel Behaviors from AIS data using the Bayesian Bootstrap](https://yongkyung-oh.github.io/Bayesian_Bootstrap_for_AIS/)
+(Working) YongKyung Oh and SungIl Kim, **Detection of Abnormal Vessel Behaviors from AIS data using the Bayesian Bootstrap**
 
 Corresponding author: SungIl Kim (sungil.kim@unist.ac.kr)
 
