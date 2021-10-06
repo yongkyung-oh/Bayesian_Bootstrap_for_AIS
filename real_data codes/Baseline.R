@@ -115,7 +115,7 @@ y_max <- max(data.frame(important_node_list)[2,])
 long_all <- range(x_min, x_max)
 lati_all <- range(y_min, y_max)
 
-register_google(key="GOOGLE_MAP_API")
+register_google(key="[GOOGLE_MAP_API]")
 myLocation <- c(lon=as.numeric(mean(long_all)), lat=as.numeric(mean(lati_all)))
 
 ids <- data.frame()
