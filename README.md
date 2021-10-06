@@ -8,8 +8,5 @@ Maritime logistics play an important role in the global economy. However, the un
 
 ## Methodology Overview
 <p align="center">
-  <img width="22.5%" src="method_overview_1.png" />
-  <img width="17.5%" src="method_overview_2.png" />
-  <img width="20.0%" src="method_overview_3.png" />
-  <img width="25.0%" src="method_overview_4.png" />
+  <img width="80%" src="overview.png" />
 </p> 
