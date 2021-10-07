@@ -65,6 +65,6 @@ grid2_example_df[,2] <- round(grid2_example_df[,2]/sum(grid2_example_df[,2]), 2)
 grid2_example_df <- data.frame("Route" = grid2_example_df[,1], "Percentage" = grid2_example_df[,2])
 
 library(ggplot2)
-p<-ggplot(data=data.frame(grid2_example_df), aes(x=Route, y=Percentage)) + geom_bar(stat="identity") + geom_text(aes(label=Percentage), vjust=-0.5, size=4.5) + 
+p<-ggplot(data=data.frame(grid2_example_df), aes(x=Route, y=Percentage)) + geom_bar(stat="identity") + geom_text(aes(label=sprintf("%0.2f", round(Percentage, digits = 2))), vjust=-0.5, size=4.5) + 
   theme(axis.title=element_text(size=14), axis.text=element_text(size=12), legend.title=element_text(size=14), legend.text=element_text(size=12))
 p
