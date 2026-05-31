@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software or method, please cite the paper below."
+title: "Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors From AIS Data in Maritime Logistics"
+type: software
+authors:
+  - family-names: Oh
+    given-names: YongKyung
+    orcid: "https://orcid.org/0000-0002-8027-3433"
+  - family-names: Kim
+    given-names: Sungil
+    orcid: "https://orcid.org/0000-0003-0208-4378"
+repository-code: "https://github.com/yongkyung-oh/Bayesian_Bootstrap_for_AIS"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors From AIS Data in Maritime Logistics"
+  authors:
+    - family-names: Oh
+      given-names: YongKyung
+      orcid: "https://orcid.org/0000-0002-8027-3433"
+    - family-names: Kim
+      given-names: Sungil
+      orcid: "https://orcid.org/0000-0003-0208-4378"
+  journal: "IEEE Transactions on Automation Science and Engineering"
+  volume: 21
+  issue: 4
+  start: "6680"
+  end: "6692"
+  year: 2024
+  month: 10
+  publisher:
+    name: "Institute of Electrical and Electronics Engineers (IEEE)"
+  doi: 10.1109/TASE.2023.3329041
+  url: "https://ieeexplore.ieee.org/document/10311542/"
