@@ -1,5 +1,5 @@
 # [Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors From AIS Data in Maritime Logistics](https://yongkyung-oh.github.io/Bayesian_Bootstrap_for_AIS/)
-Oh, Y., & Kim, S. (2023). Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors From AIS Data in Maritime Logistics. IEEE Transactions on Automation Science and Engineering. doi: [10.1109/TASE.2023.3329041](https://ieeexplore.ieee.org/document/10311542).
+Oh, Y., & Kim, S. (2024). Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors From AIS Data in Maritime Logistics. IEEE Transactions on Automation Science and Engineering, 21(4), 6680-6692. doi: [10.1109/TASE.2023.3329041](https://ieeexplore.ieee.org/document/10311542).
 
 Corresponding author: SungIl Kim (sungil.kim@unist.ac.kr)
 
