@@ -2,3 +2,9 @@ real_data_codes/rf_dtmmsi.csv
 *.log
 .idea
 .ipynb_checkpoints
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+Thumbs.db
+desktop.ini
