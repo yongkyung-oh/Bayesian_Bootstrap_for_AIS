@@ -64,7 +64,7 @@ The notebooks and scripts use Python and R. Exact environment files are not curr
 If you use this repository, method, or project materials, please cite the published paper:
 
 ```bibtex
-@article{oh2024grid,
+@article{oh_grid-based_2024,
   title   = {Grid-Based Bayesian Bootstrap Approach for Real-Time Detection of Abnormal Vessel Behaviors From AIS Data in Maritime Logistics},
   author  = {Oh, YongKyung and Kim, Sungil},
   journal = {IEEE Transactions on Automation Science and Engineering},
