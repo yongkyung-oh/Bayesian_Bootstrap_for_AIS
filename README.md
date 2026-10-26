@@ -9,6 +9,7 @@ YongKyung Oh and Sungil Kim, *IEEE Transactions on Automation Science and Engine
 - Paper: https://ieeexplore.ieee.org/document/10311542/
 - DOI: https://doi.org/10.1109/TASE.2023.3329041
 - Project page: https://yongkyung-oh.github.io/Bayesian_Bootstrap_for_AIS/
+- Author page: [YongKyung Oh](https://yongkyung-oh.github.io/) · [ORCID](https://orcid.org/0000-0002-8027-3433) · [Scientific Inference Lab publications](https://scientific-inference-lab.github.io/publications/#oh_grid-based_2024)
 - Citation metadata: [`CITATION.cff`](CITATION.cff)
 - License: [`MIT`](LICENSE)
 
@@ -29,8 +30,8 @@ This repository implements a grid-based Bayesian bootstrap approach for real-tim
 | Path | Contents |
 | --- | --- |
 | [`functions.py`](functions.py) | Core Python helper functions for route/path computation and bootstrap-based analysis. |
-| [`tutorial codes/`](tutorial%20codes/) | Tutorial notebooks and scripts for illustrative examples, simulation, computation checks, and comparison experiments. |
-| [`real_data codes/`](real_data%20codes/) | Notebooks, scripts, and figures for the real-data maritime logistics case study. |
+| [`tutorial codes/`](https://github.com/yongkyung-oh/Bayesian_Bootstrap_for_AIS/tree/master/tutorial%20codes) | Tutorial notebooks and scripts for illustrative examples, simulation, computation checks, and comparison experiments. |
+| [`real_data codes/`](https://github.com/yongkyung-oh/Bayesian_Bootstrap_for_AIS/tree/master/real_data%20codes) | Notebooks, scripts, and figures for the real-data maritime logistics case study. |
 | [`overview.png`](overview.png) | High-level methodology figure used in the project page and README. |
 | [`CITATION.cff`](CITATION.cff) | Machine-readable citation metadata for GitHub's "Cite this repository" panel. |
 
@@ -51,11 +52,11 @@ The proposed method addresses this by:
 The repository is organized around two use cases:
 
 1. **Tutorial and simulation examples**
-   - Start with notebooks under [`tutorial codes/`](tutorial%20codes/).
+   - Start with notebooks under [`tutorial codes/`](https://github.com/yongkyung-oh/Bayesian_Bootstrap_for_AIS/tree/master/tutorial%20codes).
    - Use these files to inspect the route representation and bootstrap computation on controlled examples.
 
 2. **Real-data case study**
-   - See [`real_data codes/`](real_data%20codes/) for preprocessing, baseline construction, grid analysis, and visualization materials used for the maritime logistics case study.
+   - See [`real_data codes/`](https://github.com/yongkyung-oh/Bayesian_Bootstrap_for_AIS/tree/master/real_data%20codes) for preprocessing, baseline construction, grid analysis, and visualization materials used for the maritime logistics case study.
 
 The notebooks and scripts use Python and R. Exact environment files are not currently provided, so inspect the imports in each notebook/script before running the full workflow.
 
