@@ -1,0 +1,85 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Contrast overrides for the Cayman theme (WCAG 2.x AA, 4.5:1 for body text).
+// Same hues as the theme, darker values. Theme defaults are noted in comments.
+
+$aa-green: #107542; // theme #159957; 5.76:1 on #fff
+$aa-muted: #68777e; // theme #819198; 4.64:1 on #fff
+
+// Header: darken the green end of the gradient so white text passes.
+.page-header {
+  background-color: $aa-green;
+  background-image: linear-gradient(120deg, #155799, $aa-green);
+}
+
+.project-tagline {
+  opacity: 0.9; // theme 0.7
+}
+
+.btn {
+  color: #fff; // theme rgba(255, 255, 255, 0.7)
+
+  &:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); // theme 0.2
+    border-color: rgba(255, 255, 255, 0.6); // theme 0.3
+  }
+}
+
+.main-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $aa-green;
+  }
+
+  blockquote {
+    color: $aa-muted;
+  }
+}
+
+.site-footer-credits {
+  color: $aa-muted;
+}
+
+// Code highlighting (rouge-github) on the #f3f6fa code background.
+.highlight {
+  .c,
+  .c1,
+  .cd,
+  .cm {
+    color: #717060; // theme #999988
+  }
+
+  .bp,
+  .cp,
+  .cs {
+    color: #6f6f6f; // theme #999999
+  }
+
+  .il,
+  .m,
+  .mb,
+  .mf,
+  .mh,
+  .mi,
+  .mo,
+  .mx {
+    color: #007c7d; // theme #009999
+  }
+
+  .na,
+  .no,
+  .nv,
+  .vc,
+  .vg,
+  .vi {
+    color: #006d6d; // theme #008080
+  }
+}
